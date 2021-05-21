@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background-color: rgb(24, 24, 24);
+  height: 100vh;
+}
+
+.box {
+  margin: 0 auto;
+  width: 50%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 24px solid rgb(247, 247, 247);
+  transition: all 1000ms ease-in-out;
+}
+
+.box:hover {
+  background-color: rgb(247, 247, 247);
+}
+
+.touch {
+  transition: all 1000ms ease-in-out;
+  color: rgb(247, 247, 247);
+  font-size: 45px;
+}
