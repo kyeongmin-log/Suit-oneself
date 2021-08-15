@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="main.js" defer></script>
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      li img {
+        width: 120px;
+        height: 150px;
+      }
+      li p {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        width: 50%;
+        text-align: center;
+      }
+    </style>
+    <title>API 연습</title>
+  </head>
+  <body>
+    <h1>Kakao Api Book Search</h1>
+    <input id="bookName" value="" type="text" />
+    <button id="search">검색</button>
+    <ul class="book-list"></ul>
+  </body>
+</html>
