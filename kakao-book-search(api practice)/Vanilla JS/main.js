@@ -16,7 +16,7 @@ function searchBooks() {
 function getBookData(bookName) {
   return fetch(`https://dapi.kakao.com/v3/search/book?target=title&query=${bookName}`, {
     headers: {
-      Authorization: "{카카오 API키 입력}",
+      Authorization: "KakaoAK {카카오 API키 입력}",
     },
   })
     .then((response) => response.json())
@@ -25,11 +25,12 @@ function getBookData(bookName) {
 
 // 넘어온 데이터를 가지고 화면에 표시할 내용을 만든다.
 function createBook(book) {
+  const noImg = "https://3.bp.blogspot.com/-WhBe10rJzG4/U4W-hvWvRCI/AAAAAAAABxg/RyWcixpgr3k/s1600/noimg.jpg";
   return `
   <li class="book">
     <span class="title">${book.title}</span>
       <img
-        src=${book.thumbnail}
+        src=${book.thumbnail === "" ? noImg : book.thumbnail}
       />
       <p>
         ${book.contents === "" ? "(내용이 없습니다.)" : book.contents}
